@@ -1,3 +1,4 @@
+const { shell } = require('electron');
 const fs = require('fs');
 
 let items = document.getElementById('items');
@@ -109,6 +110,18 @@ exports.addItem = (item, isNew = false) => {
     }
 }
 
+exports.openNative = () => {
+    if( !this.storage.length ) return;
+
+    let selectedItem = this.getSelectedItem();
+
+    let contentURL = selectedItem.node.dataset.url;
+
+    shell.openExternal(contentURL);
+}
+
 this.storage.forEach(item => {
     this.addItem(item);
 });
+
+
