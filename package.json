@@ -34,8 +34,7 @@
       "provider": "github"
     },
     "mac": {
-      "category": "public.app-category.productivity",
-      "target": "dmg"
+      "category": "public.app-category.productivity"
     }
   }
 }
