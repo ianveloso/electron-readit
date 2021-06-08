@@ -1,7 +1,7 @@
 {
-  "name": "master-electron",
+  "name": "Readit",
   "version": "1.0.0",
-  "description": "Master Electron Course Code",
+  "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -9,6 +9,7 @@
     "reset": "git reset --hard"
   },
   "repository": "https://github.com/stackacademytv/master-electron",
+  "homepage": "https://github.com/stackacademytv/master-electron",
   "keywords": [
     "Electron",
     "Master Electron",
@@ -18,9 +19,18 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0",
+    "electron-builder": "^22.10.5",
     "nodemon": "^2.0.0"
   },
   "dependencies": {
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.ianveloso.readit",
+    "copyright": "Copyright Stackacademy.tv",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    }
   }
 }
