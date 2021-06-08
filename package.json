@@ -6,10 +6,12 @@
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
-    "reset": "git reset --hard"
+    "reset": "git reset --hard",
+    "build": "electron-builder -m",
+    "release": "electron-builder -m --publish 'onTagOrDraft'"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
-  "homepage": "https://github.com/stackacademytv/master-electron",
+  "repository": "https://github.com/ianveloso/electron-readit",
+  "homepage": "https://github.com/ianveloso/electron-readit",
   "keywords": [
     "Electron",
     "Master Electron",
@@ -28,6 +30,9 @@
   "build": {
     "appId": "com.ianveloso.readit",
     "copyright": "Copyright Stackacademy.tv",
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
       "category": "public.app-category.productivity",
       "target": "dmg"
